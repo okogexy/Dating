@@ -1,0 +1,15 @@
+{
+    "name": "svyaz",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite --host 127.0.0.1"
+    },
+    "dependencies": {"react": "^19.1.0", "react-dom": "^19.1.0", "lucide-react": "^0.468.0"},
+    "devDependencies": {
+        "@vitejs/plugin-react": "^4.4.0",
+        "laravel-vite-plugin": "^1.2.0",
+        "vite": "^6.0.11"
+    }
+}
