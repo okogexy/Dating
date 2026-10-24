@@ -115,10 +115,10 @@ class DatingTest extends TestCase
 
     public function test_home_is_public_and_cabinet_requires_authentication(): void
     {
-        $this->get('/')->assertOk()->assertSee('Связь — хочется кого-то своего');
+        $this->get('/')->assertOk()->assertSee('Связь — найди свой вайб');
         $this->get('/cabinet')->assertRedirect(route('login'));
         $this->actingAs($this->person())->get('/cabinet')->assertOk()->assertSee('Личный кабинет — Связь');
-        $this->get('/')->assertOk()->assertSee('Связь — хочется кого-то своего');
+        $this->get('/')->assertOk()->assertSee('Связь — найди свой вайб');
     }
 
     public function test_reporting_persists_reason_and_blocks_target(): void

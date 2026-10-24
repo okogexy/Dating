@@ -7,8 +7,8 @@
     <meta name="demo-enabled" content="{{ app()->environment('local', 'testing') ? '1' : '0' }}">
     <meta name="viewer-authenticated" content="{{ auth()->check() ? '1' : '0' }}">
     <meta name="theme-color" content="#fc7445">
-    <meta name="description" content="Связь — знакомства на вашей волне. Анкеты, общие интересы и разговоры, с которых начинается что-то настоящее. Для людей старше 18 лет.">
-    <title>{{ request()->is('cabinet') ? 'Личный кабинет — Связь' : 'Связь — хочется кого-то своего' }}</title>
+    <meta name="description" content="Связь — найди своего человека, общий вайб и того, кому скинуть рилс в три ночи. Анкеты, взаимные лайки и чаты. Только 18+.">
+    <title>{{ request()->is('cabinet') ? 'Личный кабинет — Связь' : 'Связь — найди свой вайб' }}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     @viteReactRefresh
     @vite(['resources/css/app.css', 'resources/js/app.jsx'])

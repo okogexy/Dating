@@ -3,8 +3,8 @@
 use App\Http\Controllers\DatingController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'app')->name('login');
-Route::view('/cabinet', 'app')->middleware('auth')->name('cabinet');
+Route::get('/', fn () => response()->view('app')->header('Cache-Control', 'no-store, private'))->name('login');
+Route::get('/cabinet', fn () => response()->view('app')->header('Cache-Control', 'no-store, private'))->middleware('auth')->name('cabinet');
 Route::prefix('api')->group(function () {
     Route::get('/state', [DatingController::class, 'state']);
     Route::post('/login', [DatingController::class, 'login'])->middleware('throttle:10,1');
